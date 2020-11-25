@@ -24,7 +24,7 @@ if bashio::config.true 'openvpn_enabled'; then
         bashio::die 'OpenVPN is enabled, but no password was specified'
     fi
 
-    if ! bashio::file_exists "/config/openvpn/$(bashio::config.get 'openvpn_config').ovpn"; then
-        bashio::die "The configured /config/openvpn/$(bashio::config.get 'openvpn_config').ovpn file is not found"
+    if ! bashio::fs.file_exists "/config/openvpn/$(bashio::config 'openvpn_config').ovpn"; then
+        bashio::die "The configured /config/openvpn/$(bashio::config 'openvpn_config').ovpn file is not found"
     fi
 fi
