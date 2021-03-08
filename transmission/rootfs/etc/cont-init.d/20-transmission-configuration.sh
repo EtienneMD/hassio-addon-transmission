@@ -24,18 +24,18 @@ CONFIG=$(bashio::jq "${CONFIG}" ".\"rpc-host-whitelist-enabled\"=false")
 CONFIG=$(bashio::jq "${CONFIG}" ".\"bind-address-ipv4\"=\"0.0.0.0\"")
 
 # Speed limits
-CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-down-enabled\"=true")
-CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-down\"=800")
-CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-up-enabled\"=true")
-CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-up\"=1")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-down-enabled\"=true")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-down\"=800")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-up-enabled\"=true")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"speed-limit-up\"=1")
 
 # Alt speeds
-CONFIG=$(bashio::jq "${CONFIG}" ".\"alt-speed-down\"=200")
-CONFIG=$(bashio::jq "${CONFIG}" ".\"alt-speed-up\"=1")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"alt-speed-down\"=200")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"alt-speed-up\"=1")
 
 # Ratio limits
-CONFIG=$(bashio::jq "${CONFIG}" ".\"ratio-limit-enabled\"=true")
-CONFIG=$(bashio::jq "${CONFIG}" ".\"ratio-limit\"=0")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"ratio-limit-enabled\"=true")
+#CONFIG=$(bashio::jq "${CONFIG}" ".\"ratio-limit\"=0")
 
 
 authentication_required=$(bashio::config 'authentication_required')
